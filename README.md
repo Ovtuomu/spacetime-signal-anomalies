@@ -176,7 +176,6 @@ After collecting data, extract NMEA sentences:
 
 python src/parse.py
 
-
 This will generate:
 
 data/parsed_nmea.csv
