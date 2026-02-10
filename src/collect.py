@@ -43,3 +43,18 @@ def collect():
 
 if __name__ == "__main__":
     collect()
+
+import argparse
+...
+def collect(port):
+    with serial.Serial(port, BAUD, timeout=1) as ser:
+...
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Collect GNSS data from a serial GPS device.")
+    parser.add_argument("--port", required=True, help="Serial port for GNSS device (e.g. COM3 or /dev/ttyUSB0)")
+
+    args = parser.parse_args()
+    collect(args.port)
+
