@@ -133,3 +133,55 @@ This repository is, in that sense, both a technical experiment and a personal di
 to measure before naming,  
 to observe before concluding,  
 and to stay honest about uncertainty.
+
+## How to run
+
+This project is designed to be simple to set up and run.
+
+### 1. Requirements
+Make sure you have Python 3.9+ installed.
+
+Install dependencies:
+```bash
+pip install -r requirements.txt
+Connect GNSS device
+
+Connect your GNSS/GPS receiver via USB or serial
+
+Note the serial port name:
+
+Windows: COM3, COM4, ...
+
+Linux: /dev/ttyUSB0
+
+macOS: /dev/tty.usbserial-*
+
+ollect raw GNSS data
+
+Edit the serial port in src/collect.py if needed, then run:
+
+python src/collect.py
+
+This will:
+
+read raw GNSS messages
+
+store them in data/raw_gnss_log.csv
+
+run continuously until stopped with Ctrl + C
+
+Parse NMEA messages
+
+After collecting data, extract NMEA sentences:
+
+python src/parse.py
+
+
+This will generate:
+
+data/parsed_nmea.csv
+
+5. Analysis (next step)
+
+Analysis scripts will be added incrementally.
+The current focus is on clean data collection and parsing.
