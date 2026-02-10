@@ -141,12 +141,12 @@ This project is designed to be simple to set up and run.
 ### 1. Requirements
 Make sure you have Python 3.9+ installed.
 
-Install dependencies:
+### Install dependencies:
 ```bash
 pip install -r requirements.txt
 Connect GNSS device
 
-Connect your GNSS/GPS receiver via USB or serial
+### Connect your GNSS/GPS receiver via USB or serial
 
 Note the serial port name:
 
@@ -170,7 +170,7 @@ store them in data/raw_gnss_log.csv
 
 run continuously until stopped with Ctrl + C
 
-Parse NMEA messages
+### Parse NMEA messages
 
 After collecting data, extract NMEA sentences:
 
